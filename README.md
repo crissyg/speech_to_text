@@ -1,31 +1,66 @@
-# Speech to Text
+# Speech to Text Converter
 
-This python application converts your speech to text. The output of your speech will be saved as speech_to_text.txt file in the same directory.
+This python application Python application converts spoken words into text using your computer’s microphone.  
+The recognized speech is saved to a file named `speech_to_text.txt` in the same directory.
 
-## Pre-reqs on MAC OS:
+---
 
-1. Use Homebrew to install the prerequisites portaudio library, then install PyAudio using pip:
+## Features
+
+- Converts speech to text in real-time
+- Saves the transcribed text to a file for later use
+- Minimal and easy-to-understand codebase
+- Cross-platform (instructions provided for macOS)
+
+---
+
+## Prerequisites (macOS)
+
+1. **Install PortAudio (required for PyAudio):**
+    ```bash
+    brew install portaudio
+    ```
+2. **Install Python dependencies:**
+    ```bash
+    pip3 install pyaudio 
+    pip3 install SpeechRecognition
+    ```
+3. **Check your hardware:**  
+   Ensure your microphone and speakers are functioning and the volume is on.
+
+---
+
+## Usage
+
+1. **Download the script:**  
+   Save `speech_to_text.py` to your computer.
+
+2. **Run the script in your terminal:**
+    ```bash
+    python3 speech_to_text.py
+    ```
+
+3. **Follow the prompts:**
+    - When you see `Please speak now:`, begin speaking clearly into your microphone.
+    - After processing, the application will confirm:  
+      `Last sentence you spoke was saved in speech_to_text.txt`.
+
+4. **View your transcription:**  
+   Open `speech_to_text.txt` in the same directory to see your transcribed speech.
+
+---
+
+## Example Output
+
 ```
-brew install portaudio
-pip3  install pyaudio
-```
-2. Install SpeechRecognition 
-```
-pip3  install SpeechRecognition
-```
-3. Ensure that your mic/speakers are working properly and the volume is on.
-
-## How to run speech_to_text.py:
-
-1. Copy and save speech_to_text.py to your PC.
-2. Run the script in your terminal:
+Please speak now:
+[You speak your sentence aloud]
+Last sentence you spoke was saved in speech_to_text.txt.
 ```
 
-python3 speech_to_text.py
+---
 
-```
-3.  Observe that the first message that shows up in your terminal is `Please speak now:` 
+## Notes
 
-4. After you see that message, begin speaking.
-5. Shortly after a message will displayed in the terminal saying `last sentence you spoke was saved in speech_to_text.txt`.
-6. Naviagte to the directory from where you ran the script and open the file to view the text.
+- For best results, speak clearly and ensure minimal background noise.
+- This application uses the [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) and [PyAudio](https://pypi.org/project/PyAudio/) Python libraries.
